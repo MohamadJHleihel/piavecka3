@@ -1,13 +1,23 @@
 import { StatusBar } from 'expo-status-bar';
-import { FlatList, FlatListComponent, StyleSheet, Text, View } from 'react-native';
+import { useState } from 'react';
+import { FlatList, FlatListComponent, StyleSheet, Text, View ,Button} from 'react-native';
 
-export default function Fancybox() {
-
+export default function Fancybox(props) {
+  
+  
+    const [siffran, setSiffran] = useState(0);
 
   
   return (
     <View style={fancystyles.redbox} >
-        <Text>Fin Box</Text>
+        <Text>{props.name.lastname}</Text>
+        <Text> {siffran}</Text>
+
+        <Button title = "Klicka" onPress={() => {
+          setSiffran(siffran+1); 
+
+
+        }}/>
 
 
 
